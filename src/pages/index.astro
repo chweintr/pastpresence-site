@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import ParticleBackground from '../components/ParticleBackground.astro';
+---
+
+<BaseLayout title="Home">
+  <ParticleBackground />
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-orbitron font-light mb-8 tracking-tight">
+        Holographic Conversations
+        <span class="block text-gradient font-normal">Powered by Research</span>
+      </h1>
+      
+      <p class="text-xl text-neutral-600 mb-12 max-w-3xl mx-auto">
+        Where academic rigor meets cutting-edge technology. Our AI personas are built from meticulously curated historical datasets, not generic chatbots.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/portfolio" class="glass hover:bg-white/20 px-8 py-4 rounded-full font-medium transition-all duration-300">
+          See Echoes of Indiana
+        </a>
+        <a href="/contact" class="bg-coral-500 hover:bg-coral-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300">
+          Start Your Project
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What Makes Us Different -->
+  <section class="relative py-24 px-6 bg-neutral-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-orbitron font-light mb-12">
+        What Makes Our <span class="text-gradient">Personas Different</span>
+      </h2>
+      
+      <div class="glass rounded-3xl p-12">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold mb-6">Meticulously Researched Datasets</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-coral-500 mt-1">•</span>
+                <span>Primary source documents and archives</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-coral-500 mt-1">•</span>
+                <span>Academic partnerships with IU researchers</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-coral-500 mt-1">•</span>
+                <span>Historian-verified fact-checking</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-coral-500 mt-1">•</span>
+                <span>Curated by humanities experts</span>
+              </li>
+            </ul>
+          </div>
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold mb-6">Not Just Generic AI</h3>
+            <p class="text-neutral-600 mb-4">
+              While others use off-the-shelf chatbots, we build historically accurate personas from the ground up. Each conversation reflects genuine personality, era-appropriate knowledge, and verified biographical details.
+            </p>
+            <a href="/team" class="text-coral-500 hover:text-coral-600 font-medium">
+              Meet our research team →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="relative py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-orbitron font-light mb-6">
+        Ready to Create Your Own
+        <span class="text-gradient"> Echoes?</span>
+      </h2>
+      <p class="text-xl text-neutral-600 mb-8">
+        Join museums and institutions bringing their stories to life through holographic conversations
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105">
+        Schedule a Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

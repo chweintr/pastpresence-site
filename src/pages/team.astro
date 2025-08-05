@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<BaseLayout title="Team">
+  <Navigation />
+  
+  <section class="relative pt-32 pb-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-5xl font-light mb-6">
+          Where <span class="text-gradient">Humanities Meet Technology</span>
+        </h1>
+        <p class="text-xl text-neutral-600">
+          Academic rigor, technological innovation, and artistic vision
+        </p>
+      </div>
+      
+      <!-- Founder -->
+      <div class="glass rounded-3xl p-8 mb-12">
+        <div class="text-center">
+          <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-coral-300 to-coral-500"></div>
+          <h2 class="text-2xl font-semibold mb-2">Caleb Weintraub</h2>
+          <p class="text-coral-500 font-medium mb-4">Founder & Creative Director</p>
+          <p class="text-neutral-600 mb-6 max-w-2xl mx-auto">
+            Professor at Indiana University with expertise in digital humanities and interactive media. 
+            Combines academic research methodology with cutting-edge holographic technology to create 
+            historically accurate, engaging experiences.
+          </p>
+          <a href="mailto:calebweintraubstudio@gmail.com" 
+             class="text-coral-500 hover:text-coral-600 transition-colors">
+            calebweintraubstudio@gmail.com
+          </a>
+        </div>
+      </div>
+      
+      <!-- Research Partners -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-semibold text-center mb-8">Research Partners</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-neutral-200 flex items-center justify-center">
+              <span class="text-2xl font-light text-neutral-500">IU</span>
+            </div>
+            <h3 class="font-semibold mb-2">Indiana University</h3>
+            <p class="text-sm text-neutral-600">Graduate researchers in history, digital humanities, and archival studies</p>
+          </div>
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-neutral-200 flex items-center justify-center">
+              <span class="text-sm font-medium text-neutral-500">HIST</span>
+            </div>
+            <h3 class="font-semibold mb-2">Regional Historians</h3>
+            <p class="text-sm text-neutral-600">Local experts who provide context, fact-checking, and archival materials</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Expertise Areas -->
+      <div class="glass rounded-3xl p-8">
+        <h2 class="text-2xl font-semibold text-center mb-8">Our Approach</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="w-16 h-16 bg-coral-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-coral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Research</h3>
+            <p class="text-sm text-neutral-600">Primary sources, oral histories, archival materials curated by academic researchers</p>
+          </div>
+          <div>
+            <div class="w-16 h-16 bg-coral-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-coral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Technology</h3>
+            <p class="text-sm text-neutral-600">Advanced AI models trained on verified datasets with holographic display systems</p>
+          </div>
+          <div>
+            <div class="w-16 h-16 bg-coral-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-coral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Experience</h3>
+            <p class="text-sm text-neutral-600">Artistic direction that creates compelling, emotionally resonant interactions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
