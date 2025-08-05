@@ -82,7 +82,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-coral-400 to-coral-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent;
   }
   
   .particle-container {
