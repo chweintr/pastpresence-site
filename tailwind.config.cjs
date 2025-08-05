@@ -36,7 +36,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'display': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'display': ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
         'orbitron': ['Orbitron', 'sans-serif'],
       },
       animation: {

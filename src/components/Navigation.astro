@@ -12,7 +12,7 @@ const navItems = [
 <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
   <div class="max-w-7xl mx-auto">
     <div class="glass rounded-2xl px-8 py-4 flex items-center justify-between">
-      <a href="/" class="text-xl font-semibold tracking-tight">
+      <a href="/" class="text-xl font-semibold tracking-tight text-white">
         Past<span class="text-gradient">Presence</span>
       </a>
       
@@ -20,7 +20,7 @@ const navItems = [
         {navItems.map((item) => (
           <a 
             href={item.href} 
-            class="text-sm font-medium text-neutral-700 hover:text-accent-pink transition-colors duration-200"
+            class="text-sm font-medium text-white/90 hover:text-white transition-colors duration-200"
           >
             {item.label}
           </a>
