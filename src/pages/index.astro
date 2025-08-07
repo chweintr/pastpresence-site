@@ -10,23 +10,43 @@ import ParticleBackground from '../components/ParticleBackground.astro';
   
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-5xl md:text-7xl font-display font-light mb-8 tracking-tight text-white">
-        Holographic Conversations
-        <span class="block bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent font-normal">Powered by Research</span>
-      </h1>
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left: Main Content -->
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-display font-light mb-8 tracking-tight text-white">
+          Holographic Conversations
+          <span class="block bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent font-normal">Powered by Research</span>
+        </h1>
+        
+        <p class="text-xl text-white/80 mb-8 font-light">
+          Where academic rigor meets cutting-edge technology. Our AI personas are built from meticulously curated historical datasets, not generic chatbots.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
+          <a href="/portfolio" class="glass-mint border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-medium transition-all duration-300 backdrop-blur-md text-white">
+            See Echoes of Indiana
+          </a>
+          <a href="/contact" class="bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300">
+            Start Your Project
+          </a>
+        </div>
+      </div>
       
-      <p class="text-xl text-white/80 mb-12 max-w-3xl mx-auto font-light">
-        Where academic rigor meets cutting-edge technology. Our AI personas are built from meticulously curated historical datasets, not generic chatbots.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/portfolio" class="glass-mint border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-medium transition-all duration-300 backdrop-blur-md text-white">
-          See Echoes of Indiana
-        </a>
-        <a href="/contact" class="bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300">
-          Start Your Project
-        </a>
+      <!-- Right: Demo Video -->
+      <div class="relative flex justify-center md:justify-end">
+        <div class="relative w-80 max-w-full">
+          <div class="bg-white/10 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 aspect-[9/16]">
+            <iframe 
+              src="https://www.youtube.com/embed/_PDIsW-Lk6g?autoplay=1&mute=1&loop=1&playlist=_PDIsW-Lk6g&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&enablejsapi=1"
+              class="w-full h-full z-30"
+              style="border: none;"
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <!-- Subtle glow -->
+          <div class="absolute inset-0 bg-gradient-to-r from-accent-pink to-accent-coral opacity-10 blur-2xl -z-10 transform scale-110"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -43,30 +63,6 @@ import ParticleBackground from '../components/ParticleBackground.astro';
           Step into the future of storytelling. Our technology brings historical figures and contemporary personalities to life as interactive holograms. Visitors can engage in real-time conversations, ask questions, hear untold stories, and discover secrets from the past.
         </p>
 
-        <!-- Demo Video - Holographic Conversation -->
-        <div class="relative mb-12 flex justify-center z-30">
-          <!-- Phone Frame Container -->
-          <div class="relative mx-auto z-30" style="width: 320px; max-width: 90vw;">
-            <!-- Phone Frame -->
-            <div class="relative bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-[3rem] p-3 shadow-2xl z-30">
-              <!-- Screen -->
-              <div class="relative bg-black rounded-[2.5rem] overflow-hidden z-30" style="padding-bottom: 177.78%;">
-                <!-- Video -->
-                <iframe 
-                  src="https://www.youtube.com/embed/_PDIsW-Lk6g?autoplay=1&mute=1&loop=1&playlist=_PDIsW-Lk6g&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&enablejsapi=1"
-                  class="absolute inset-0 w-full h-full z-30"
-                  style="border: none;"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <!-- Notch -->
-              <div class="absolute top-6 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-neutral-900 rounded-full z-30"></div>
-            </div>
-            <!-- Glow Effect -->
-            <div class="absolute inset-0 bg-gradient-to-r from-accent-pink to-accent-coral opacity-20 blur-3xl z-20 transform scale-110"></div>
-          </div>
-        </div>
         
         <div class="grid md:grid-cols-3 gap-8 mt-12">
           <div class="text-center">
