@@ -50,11 +50,14 @@ import ParticleBackground from '../components/ParticleBackground.astro';
             muted 
             loop 
             playsinline
+            controls
             class="w-full h-auto max-h-96 object-cover"
+            src="/video/holographic-conversation-demo.mp4"
+            poster="/images/past-presense-blank.png"
           >
-            <source src="/video/holographic-conversation-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
         </div>
         
         <div class="grid md:grid-cols-3 gap-8 mt-12">
