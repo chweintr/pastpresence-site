@@ -34,9 +34,9 @@ import ParticleBackground from '../components/ParticleBackground.astro';
       
       <!-- Right: Demo Video -->
       <div class="relative flex justify-center md:justify-end">
-        <div class="relative w-72 max-w-full">
-          <!-- Simple video container -->
-          <div class="relative rounded-xl overflow-hidden shadow-lg" style="aspect-ratio: 9/16;">
+        <div class="relative w-96 max-w-full">
+          <!-- Video container with fade edges -->
+          <div class="relative rounded-2xl overflow-hidden" style="aspect-ratio: 16/9;">
             <video 
               autoplay 
               muted 
@@ -53,6 +53,9 @@ import ParticleBackground from '../components/ParticleBackground.astro';
                 allow="autoplay; encrypted-media">
               </iframe>
             </video>
+            <!-- Alpha gradient overlay to blend dark areas -->
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background-primary/40 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background-primary/30 via-transparent to-transparent pointer-events-none"></div>
           </div>
         </div>
       </div>
