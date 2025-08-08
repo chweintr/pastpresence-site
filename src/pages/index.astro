@@ -34,26 +34,28 @@ import ParticleBackground from '../components/ParticleBackground.astro';
       
       <!-- Right: Demo Video -->
       <div class="relative flex justify-center md:justify-end">
-        <div class="relative">
-          <video 
-            autoplay 
-            muted 
-            loop 
-            playsinline
-            class="max-w-sm w-full h-auto"
-            src="/video/holographic-conversation-demo.mp4"
-          >
-            <!-- Fallback to YouTube if video doesn't load -->
-            <iframe 
-              src="https://www.youtube.com/embed/_PDIsW-Lk6g?autoplay=1&mute=1&loop=1&playlist=_PDIsW-Lk6g&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
-              class="w-full h-full"
-              style="border: none;"
-              allow="autoplay; encrypted-media">
-            </iframe>
-          </video>
-          <!-- Alpha gradient overlay to blend dark areas -->
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background-primary/40 pointer-events-none"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-background-primary/30 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative w-80 h-80">
+          <!-- Circular video frame with white stroke -->
+          <div class="w-full h-full rounded-full overflow-hidden border-4 border-white/80 shadow-2xl">
+            <video 
+              autoplay 
+              muted 
+              loop 
+              playsinline
+              class="w-full h-full object-cover"
+              src="/video/holographic-conversation-demo.mp4"
+            >
+              <!-- Fallback to YouTube if video doesn't load -->
+              <iframe 
+                src="https://www.youtube.com/embed/_PDIsW-Lk6g?autoplay=1&mute=1&loop=1&playlist=_PDIsW-Lk6g&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+                class="w-full h-full object-cover"
+                style="border: none;"
+                allow="autoplay; encrypted-media">
+              </iframe>
+            </video>
+          </div>
+          <!-- Subtle glow behind circle -->
+          <div class="absolute inset-0 bg-white/20 rounded-full blur-xl -z-10 transform scale-110"></div>
         </div>
       </div>
     </div>
