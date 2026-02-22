@@ -2,87 +2,103 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import ParticleBackground from '../components/ParticleBackground.astro';
+import { company } from '../data/company';
 ---
 
-<BaseLayout title="Contact">
+<BaseLayout title="Contact" description="Contact PastPresence for partnerships, installations, and funding conversations.">
   <ParticleBackground />
   <Navigation />
-  
+
   <section class="relative pt-32 pb-24 px-6 min-h-screen flex items-center">
     <div class="max-w-4xl mx-auto w-full">
-      <!-- Header -->
       <div class="text-center mb-12">
-        <h1 class="text-5xl md:text-6xl font-light mb-6">
-          Let's Create
-          <span class="text-gradient"> History Together</span>
+        <h1 class="text-5xl md:text-6xl text-white mb-6">
+          Build With
+          <span class="text-gradient"> PastPresence</span>
         </h1>
-        <p class="text-xl text-neutral-600">
-          Ready to bring interactive holographic conversations to your institution?
+        <p class="text-white/75 text-lg">
+          For installations, pilots, school programs, and strategic funding conversations.
         </p>
       </div>
-      
-      <!-- Contact Info -->
-      <div class="glass rounded-3xl p-12 text-center">
-        <div class="max-w-2xl mx-auto">
-          <h2 class="text-2xl font-semibold mb-8">Get in Touch</h2>
-          
-          <div class="space-y-6 mb-12">
-            <div>
-              <h3 class="text-lg font-medium mb-2">Caleb Weintraub</h3>
-              <p class="text-neutral-600">Founder & Creative Director</p>
-            </div>
-            
-            <div>
-              <a href="mailto:calebweintraubstudio@gmail.com" 
-                 class="inline-flex items-center gap-2 text-accent-pink hover:text-accent-coral transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                calebweintraubstudio@gmail.com
+
+      <div class="glass rounded-3xl p-10 md:p-12">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl text-white mb-4">Primary Contact</h2>
+            <p class="text-white/75 mb-2">Caleb Weintraub</p>
+            <p class="text-white/75 mb-6">Founder, PastPresence</p>
+            <a
+              href="mailto:calebweintraubstudio@gmail.com?subject=PastPresence%20Inquiry"
+              class="inline-flex items-center gap-2 text-accent-coral hover:text-white transition-colors"
+            >
+              calebweintraubstudio@gmail.com
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="mt-6 space-y-2 text-sm">
+              <p class="text-white/65">Web:</p>
+              <a
+                href={company.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-accent-coral hover:text-white transition-colors"
+              >
+                {company.website}
               </a>
+              <a
+                href={company.hearsayPrimaryUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-accent-coral hover:text-white transition-colors"
+              >
+                {company.hearsayPrimaryUrl}
+              </a>
+              <p class="text-white/55">Alternate HEARSAY domain: {company.hearsayAltUrl}</p>
             </div>
           </div>
-          
-          <div class="glass-dark rounded-2xl p-8 text-white">
-            <h3 class="text-xl font-semibold mb-4">What to Expect</h3>
-            <ul class="space-y-3 text-left max-w-md mx-auto">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-pink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Initial consultation to understand your vision</span>
+
+          <div class="glass-dark rounded-2xl p-6 text-white">
+            <h3 class="text-xl mb-4">Best Topics</h3>
+            <ul class="space-y-3 text-sm text-white/80">
+              <li class="flex items-start gap-2">
+                <span class="text-accent-pink mt-1">•</span>
+                <span>Echoes installation partnerships (US and international)</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-pink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Custom proposal with pricing and timeline</span>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-pink mt-1">•</span>
+                <span>HEARSAY distribution and commercialization partnerships</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-pink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Demo of technology and interaction capabilities</span>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-pink mt-1">•</span>
+                <span>Reading Companion school pilots and curriculum partners</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-pink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>ROI analysis with revenue projections</span>
+              <li class="flex items-start gap-2">
+                <span class="text-accent-pink mt-1">•</span>
+                <span>Pre-seed investment and strategic introductions</span>
               </li>
             </ul>
           </div>
-          
-          <div class="mt-12">
-            <p class="text-sm text-neutral-500 mb-4">Prefer to start with email?</p>
-            <a href="mailto:calebweintraubstudio@gmail.com?subject=PastPresence%20Inquiry" 
-               class="inline-flex items-center gap-2 bg-accent-pink hover:bg-accent-coral text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105">
-              Send an Email
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </a>
-          </div>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-white/15">
+          <p class="text-sm text-white/65 mb-4">Include in your note:</p>
+          <ul class="grid md:grid-cols-2 gap-3 text-sm text-white/80">
+            <li class="flex items-start gap-2">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Organization and role</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Which product line you are interested in</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Geography and venue context</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Desired timeline and scope</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

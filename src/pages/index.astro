@@ -2,173 +2,153 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import ParticleBackground from '../components/ParticleBackground.astro';
+import {
+  architectureSteps,
+  askItems,
+  company,
+  productLines,
+  tractionStats,
+} from '../data/company';
 ---
 
-<BaseLayout title="Home">
+<BaseLayout title="Home" description="PastPresence builds authored conversational AI across HEARSAY, Echoes, and Reading Companions.">
   <ParticleBackground />
   <Navigation />
-  
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <!-- Left: Main Content -->
-      <div class="text-center md:text-left">
-        <h1 class="text-4xl md:text-6xl font-display font-light mb-8 tracking-tight text-white">
-          Holographic Conversations
-          <span class="block bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent font-normal">Powered by Research</span>
-        </h1>
-        
-        <p class="text-xl text-white/80 mb-8 font-light">
-          Where academic rigor meets cutting-edge technology. Our AI personas are built from meticulously curated historical datasets, not generic chatbots.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
-          <a href="/portfolio" class="glass-mint border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-medium transition-all duration-300 backdrop-blur-md text-white">
-            See Echoes of Indiana
-          </a>
-          <a href="/contact" class="bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300">
-            Start Your Project
-          </a>
-        </div>
-      </div>
-      
-      <!-- Right: Demo Video -->
-      <div class="relative flex justify-center md:justify-end">
-        <div class="relative w-80 h-80">
-          <!-- Circular video frame with white stroke -->
-          <div class="w-full h-full rounded-full overflow-hidden border-4 border-white/80 shadow-2xl">
-            <video 
-              autoplay 
-              muted 
-              loop 
-              playsinline
-              class="w-full h-full object-cover"
-              src="/video/holographic-conversation-demo.mp4"
-            >
-              <!-- Fallback to YouTube if video doesn't load -->
-              <iframe 
-                src="https://www.youtube.com/embed/_PDIsW-Lk6g?autoplay=1&mute=1&loop=1&playlist=_PDIsW-Lk6g&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
-                class="w-full h-full object-cover"
-                style="border: none;"
-                allow="autoplay; encrypted-media">
-              </iframe>
-            </video>
-          </div>
-          <!-- Subtle glow behind circle -->
-          <div class="absolute inset-0 bg-white/20 rounded-full blur-xl -z-10 transform scale-110"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- What We Do -->
-  <section class="relative py-24 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-12 border border-white/20">
-        <h2 class="text-3xl md:text-4xl font-display font-light mb-8 text-white">
-          Live Holographic <span class="bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent">Conversations</span>
-        </h2>
-        
-        <p class="text-xl text-white/90 mb-8 leading-relaxed">
-          Step into the future of storytelling. Our technology brings historical figures and contemporary personalities to life as interactive holograms. Visitors can engage in real-time conversations, ask questions, hear untold stories, and discover secrets from the past.
-        </p>
-
-        
-        <div class="grid md:grid-cols-3 gap-8 mt-12">
-          <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-pink to-accent-coral rounded-full flex items-center justify-center">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium text-white mb-2">Real-Time Interaction</h3>
-            <p class="text-white/70 text-sm">Natural conversations powered by advanced AI and historical research</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-mint to-accent-teal rounded-full flex items-center justify-center">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.168 18.477 18.582 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium text-white mb-2">Authentic Stories</h3>
-            <p class="text-white/70 text-sm">Historically accurate narratives based on primary sources and archives</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-coral to-accent-pink rounded-full flex items-center justify-center">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium text-white mb-2">Hidden Secrets</h3>
-            <p class="text-white/70 text-sm">Discover untold stories and personal insights from history's most fascinating figures</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- What Makes Us Different -->
-  <section class="relative py-24 px-6 bg-background-secondary">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-display font-light mb-12">
-        What Makes Our <span class="bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent">Personas Different</span>
-      </h2>
-      
-      <div class="bg-white/50 backdrop-blur-xl rounded-3xl p-12 border border-white/30">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="text-left">
-            <h3 class="text-2xl font-semibold mb-6">Meticulously Researched Datasets</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-3">
-                <span class="text-accent-pink mt-1">•</span>
-                <span>Primary source documents and archives</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent-pink mt-1">•</span>
-                <span>Academic partnerships with IU researchers</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent-pink mt-1">•</span>
-                <span>Historian-verified fact-checking</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-accent-pink mt-1">•</span>
-                <span>Curated by humanities experts</span>
-              </li>
-            </ul>
-          </div>
-          <div class="text-left">
-            <h3 class="text-2xl font-semibold mb-6">Not Just Generic AI</h3>
-            <p class="text-neutral-600 mb-4">
-              While others use off-the-shelf chatbots, we build historically accurate personas from the ground up. Each conversation reflects genuine personality, era-appropriate knowledge, and verified biographical details.
-            </p>
-            <a href="/team" class="text-accent-pink hover:text-accent-coral font-medium transition-colors">
-              Meet our research team →
+  <section class="relative min-h-screen flex items-center pt-24 pb-16 px-6">
+    <div class="max-w-7xl mx-auto w-full">
+      <div class="grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+        <div>
+          <p class="uppercase tracking-[0.24em] text-xs text-white/80 mb-4">{company.name}</p>
+          <h1 class="text-5xl md:text-7xl font-display leading-tight text-white mb-6">
+            {company.tagline}
+            <span class="block text-gradient text-3xl md:text-5xl font-light mt-3">
+              Three product lines. One architecture.
+            </span>
+          </h1>
+          <p class="text-xl text-white/85 max-w-2xl mb-8">
+            Writers define how characters think, speak, and respond. The AI performs within those constraints.
+            Nothing is scripted. Everything is designed.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/portfolio" class="glass-mint border border-white/20 hover:bg-white/10 px-7 py-3 rounded-full font-medium text-white transition-all duration-300">
+              Explore Products
+            </a>
+            <a href="/revenue" class="glass border border-white/20 hover:border-white/35 px-7 py-3 rounded-full font-medium text-white transition-all duration-300">
+              View Business Model
+            </a>
+            <a href="/contact" class="bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-7 py-3 rounded-full font-medium transition-all duration-300">
+              Contact Caleb
             </a>
           </div>
         </div>
+
+        <div class="glass-dark rounded-3xl p-8 text-white">
+          <p class="text-sm uppercase tracking-[0.2em] text-white/60 mb-4">Problem We Solve</p>
+          <ul class="space-y-4 text-sm md:text-base">
+            <li class="flex items-start gap-3">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Most conversational AI has no authorial voice and no durable artifact.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Rich conversations disappear instead of becoming stories, memory, or study objects.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>Creators have no native medium for authored, voice-driven, real-time dialogue.</span>
+            </li>
+          </ul>
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <p class="text-white/80 text-sm">{company.oneLiner}</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- Call to Action -->
-  <section class="relative py-24 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-display font-light mb-6">
-        Ready to Create Your Own
-        <span class="bg-gradient-to-r from-accent-pink to-accent-coral bg-clip-text text-transparent"> Echoes?</span>
-      </h2>
-      <p class="text-xl text-neutral-600 mb-8">
-        Join museums and institutions bringing their stories to life through holographic conversations
-      </p>
-      <a href="/contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105">
-        Schedule a Consultation
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-      </a>
+
+  <section class="relative py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-display text-white mb-4">Three Product Lines</h2>
+        <p class="text-white/75 max-w-3xl mx-auto">
+          Each line serves a different market, but all use the same authored character engine and conversational infrastructure.
+        </p>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-6">
+        {productLines.map((line) => (
+          <article class="glass rounded-3xl p-7">
+            <p class="text-xs uppercase tracking-[0.16em] text-white/70 mb-3">{line.model}</p>
+            <h3 class="text-2xl text-white font-semibold mb-2">{line.name}</h3>
+            <p class="text-sm text-white/70 mb-4">{line.subtitle}</p>
+            <p class="text-white/85 mb-5 leading-relaxed">{line.summary}</p>
+            <p class="text-sm text-accent-coral mb-4">{line.pricing}</p>
+            <ul class="space-y-2 mb-6">
+              {line.highlights.map((item) => (
+                <li class="text-sm text-white/75 flex items-start gap-2">
+                  <span class="text-accent-pink mt-1">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={line.primaryLink.href}
+              target={line.primaryLink.href.startsWith('http') ? '_blank' : undefined}
+              rel={line.primaryLink.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              class="inline-flex items-center gap-2 text-white hover:text-accent-coral transition-colors"
+            >
+              {line.primaryLink.label}
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="relative py-20 px-6 bg-background-secondary/30">
+    <div class="max-w-7xl mx-auto">
+      <div class="glass rounded-3xl p-10">
+        <h2 class="text-3xl md:text-4xl text-white mb-8 text-center">Authored Constraint Architecture</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {architectureSteps.map((step) => (
+            <div class="glass-dark rounded-2xl p-6">
+              <h3 class="text-xl text-white mb-3">{step.title}</h3>
+              <p class="text-white/75 text-sm leading-relaxed">{step.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+        {tractionStats.map((item) => (
+          <div class="glass-dark rounded-2xl p-6">
+            <p class="text-xs uppercase tracking-[0.14em] text-white/60 mb-3">{item.label}</p>
+            <p class="text-3xl text-white font-semibold mb-2">{item.value}</p>
+            <p class="text-sm text-white/70">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="glass rounded-3xl p-10">
+        <h2 class="text-3xl text-white mb-6">The Ask</h2>
+        <ul class="space-y-3 mb-8">
+          {askItems.map((item) => (
+            <li class="text-white/85 flex items-start gap-3">
+              <span class="text-accent-pink mt-1">•</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <a href="/contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-7 py-3 rounded-full font-medium transition-all duration-300">
+          Start the Conversation
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
