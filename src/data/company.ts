@@ -48,7 +48,7 @@ export const productLines: ProductLine[] = [
       'Site-specific installations for museums, hotels, and cultural spaces using the same authored character architecture.',
     highlights: [
       'Echoes of Indiana: $75K committed',
-      'Echoes of Anatolia entered Turkish VC Round 1',
+      'Echoes of Anatolia is in preliminary planning',
       'Hardware + narrative deployment model is defined',
     ],
     primaryLink: {
