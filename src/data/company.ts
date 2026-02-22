@@ -16,7 +16,7 @@ export const company = {
   tagline: 'Authored Conversational AI',
   oneLiner: 'Three product lines. One architecture. Built and shipping.',
   contactEmail: 'calebweintraubstudio@gmail.com',
-  website: 'https://pastpresence.com',
+  website: 'https://pastpresence.io',
   hearsayPrimaryUrl: 'https://hearsay.app',
   hearsayAltUrl: 'https://hearsayexperiences.app',
 };
