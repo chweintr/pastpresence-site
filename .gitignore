@@ -11,6 +11,7 @@ dist/
 
 # macOS-specific files
 .DS_Store
+._*
 
 # editor
 .vscode/
