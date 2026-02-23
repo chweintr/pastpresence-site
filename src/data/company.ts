@@ -76,10 +76,10 @@ export const productLines: ProductLine[] = [
 ];
 
 export const tractionStats = [
-  { label: 'Live products', value: '3', detail: 'HEARSAY, Echoes, Vonnebot' },
-  { label: 'Committed', value: '$75K', detail: 'Echoes of Indiana' },
-  { label: 'Funding raised', value: '$0', detail: 'Built while bootstrapped' },
-  { label: 'Company status', value: 'LLC Filed', detail: 'Indiana entity in place' },
+  { label: 'Product lines', value: '3', detail: 'HEARSAY, Echoes, Reading Companions' },
+  { label: 'Core platform', value: 'Shared', detail: 'One architecture across all experiences' },
+  { label: 'Delivery modes', value: 'Web + Physical', detail: 'Conversational web and installation formats' },
+  { label: 'Company status', value: 'Operating', detail: 'PastPresence with active launches and pilots' },
 ];
 
 export const architectureSteps = [
@@ -95,11 +95,4 @@ export const architectureSteps = [
     title: 'User Conversation',
     detail: 'User speaks freely; system outputs narrative artifacts.',
   },
-];
-
-export const askItems = [
-  'Pre-seed target: $500K',
-  'Hire first frontend engineer and business development lead',
-  'Scale HEARSAY commercial launch and sensory pack production',
-  'Close first two Echoes contracts and run 5-10 school companion pilots',
 ];

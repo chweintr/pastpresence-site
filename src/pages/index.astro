@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation.astro';
 import ParticleBackground from '../components/ParticleBackground.astro';
 import {
   architectureSteps,
-  askItems,
   company,
   productLines,
   tractionStats,
@@ -21,9 +20,9 @@ import {
         <div>
           <p class="uppercase tracking-[0.24em] text-xs text-white/80 mb-4">{company.name}</p>
           <h1 class="text-5xl md:text-7xl font-display leading-tight text-white mb-6">
-            {company.tagline}
-            <span class="block text-gradient text-3xl md:text-5xl font-light mt-3">
-              Three product lines. One architecture.
+            Live, interactive, face-to-face conversations
+            <span class="block text-gradient text-2xl md:text-4xl font-light mt-3">
+              with fictional characters, historical figures, mythical creatures, and living legends.
             </span>
           </h1>
           <p class="text-xl text-white/85 max-w-2xl mb-8">
@@ -153,15 +152,28 @@ import {
       </div>
 
       <div class="glass rounded-3xl p-10">
-        <h2 class="text-3xl text-white mb-6">The Ask</h2>
-        <ul class="space-y-3 mb-8">
-          {askItems.map((item) => (
-            <li class="text-white/85 flex items-start gap-3">
-              <span class="text-accent-pink mt-1">•</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+        <h2 class="text-3xl text-white mb-6">Work With PastPresence</h2>
+        <p class="text-white/80 mb-6 max-w-3xl">
+          We collaborate with creative studios, cultural institutions, educators, and strategic partners to design and deploy authored conversational experiences.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+          <div class="glass-dark rounded-2xl p-5">
+            <p class="text-white text-sm font-medium mb-2">Creative + Narrative Partners</p>
+            <p class="text-white/70 text-sm">Co-develop new worlds, characters, and serialized formats.</p>
+          </div>
+          <div class="glass-dark rounded-2xl p-5">
+            <p class="text-white text-sm font-medium mb-2">Institutional and Venue Partners</p>
+            <p class="text-white/70 text-sm">Build place-based conversational installations and pilots.</p>
+          </div>
+          <div class="glass-dark rounded-2xl p-5">
+            <p class="text-white text-sm font-medium mb-2">Education Partners</p>
+            <p class="text-white/70 text-sm">Pilot Reading Companions for classrooms and programs.</p>
+          </div>
+          <div class="glass-dark rounded-2xl p-5">
+            <p class="text-white text-sm font-medium mb-2">Strategic Support</p>
+            <p class="text-white/70 text-sm">Support platform growth, launch operations, and market expansion.</p>
+          </div>
+        </div>
         <a href="/contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-pink to-accent-coral hover:opacity-90 text-white px-7 py-3 rounded-full font-medium transition-all duration-300">
           Start the Conversation
           <span aria-hidden="true">→</span>
