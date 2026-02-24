@@ -1,4 +1,6 @@
 ---
+import LiveAvatarWidget from '../components/LiveAvatarWidget.astro';
+
 export interface Props {
   title: string;
   description?: string;
@@ -24,6 +26,7 @@ const { title, description = 'PastPresence builds authored conversational AI exp
     <div class="relative z-10">
       <slot />
     </div>
+    <LiveAvatarWidget />
   </body>
 </html>
 
