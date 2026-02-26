@@ -13,16 +13,10 @@ const hearsayExperiences = [
   { name: 'The Session', frame: 'Degraded video feed', genre: 'Chemically-assisted philosophy' },
 ];
 
-const anatoliaRoster = [
-  'Nasreddin Hodja',
-  'Karagoz and Hacivat',
-  'Haci Bekir',
-  'Master Tile Maker of Iznik',
-  'Ottoman Calligrapher',
-  'Bosphorus Tea Seller',
-  'Hammam Attendant',
-  'Grand Bazaar Merchant',
-  'Kirkpinar Champion',
+const echoesExpansion = [
+  { name: 'Echoes of Anatolia', region: 'Turkey', status: 'In development' },
+  { name: 'Echoes of Uppsala', region: 'Sweden', status: 'Planned' },
+  { name: 'Echoes of Appalachia', region: 'United States', status: 'Planned' },
 ];
 ---
 
@@ -88,24 +82,23 @@ const anatoliaRoster = [
         <article class="glass rounded-3xl p-8">
           <h3 class="text-2xl text-white mb-4">Echoes Expansion</h3>
           <p class="text-white/80 mb-6">
-            Echoes of Indiana is the flagship. Echoes of Anatolia is in preliminary planning using the same framework with localized personas and materials.
+            Echoes of Indiana is the flagship installation. The same framework adapts to any region — local history, local voices, local materials.
           </p>
-          <div class="grid sm:grid-cols-2 gap-4 mb-6">
-            <div class="glass-dark rounded-2xl p-4 text-white">
-              <p class="text-sm uppercase tracking-[0.14em] text-white/60 mb-2">Indiana</p>
-              <p class="text-xl">$75K committed</p>
-              <p class="text-sm text-white/70">Venue and installation pathway in progress.</p>
-            </div>
-            <div class="glass-dark rounded-2xl p-4 text-white">
-              <p class="text-sm uppercase tracking-[0.14em] text-white/60 mb-2">Anatolia</p>
-              <p class="text-xl">Preliminary planning</p>
-              <p class="text-sm text-white/70">Early Turkish heritage-focused persona roster drafted.</p>
-            </div>
+          <div class="glass-dark rounded-2xl p-4 text-white mb-4">
+            <p class="text-sm uppercase tracking-[0.14em] text-white/60 mb-2">Flagship</p>
+            <p class="text-xl">Echoes of Indiana</p>
+            <p class="text-sm text-white/70">$75K committed. Venue and installation pathway in progress.</p>
           </div>
-          <p class="text-sm uppercase tracking-[0.14em] text-white/60 mb-3">Anatolia Persona Set</p>
-          <div class="flex flex-wrap gap-2">
-            {anatoliaRoster.map((name) => (
-              <span class="glass-dark text-white/80 text-xs px-3 py-2 rounded-full">{name}</span>
+          <p class="text-sm uppercase tracking-[0.14em] text-white/60 mb-3">Additional Regions in Development</p>
+          <div class="space-y-2">
+            {echoesExpansion.map((site) => (
+              <div class="glass-dark rounded-xl p-3 flex items-center justify-between">
+                <div>
+                  <p class="text-white text-sm font-medium">{site.name}</p>
+                  <p class="text-white/60 text-xs">{site.region}</p>
+                </div>
+                <span class="text-white/50 text-xs">{site.status}</span>
+              </div>
             ))}
           </div>
         </article>
