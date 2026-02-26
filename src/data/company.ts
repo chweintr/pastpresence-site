@@ -17,8 +17,8 @@ export const company = {
   oneLiner: 'Three product lines. One architecture. Built and shipping.',
   contactEmail: 'hello@pastpresence.io',
   website: 'https://pastpresence.io',
-  hearsayPrimaryUrl: 'https://hearsay.app',
-  hearsayAltUrl: 'https://hearsayexperiences.app',
+  hearsayPrimaryUrl: 'https://hearsayexperiences.com',
+  hearsayAltUrl: 'https://play.hearsayexperiences.com',
 };
 
 export const productLines: ProductLine[] = [
@@ -36,7 +36,7 @@ export const productLines: ProductLine[] = [
     ],
     primaryLink: {
       label: 'Visit HEARSAY',
-      href: 'https://hearsay.app',
+      href: 'https://hearsayexperiences.com',
     },
   },
   {
